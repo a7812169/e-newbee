@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{%import 'bootstrap/wtf.html' as wtf%}
+{%block content%}
+<div class="container col-lg-3 col-lg-offset-3">
+    <div class="page-header">
+        <h3>{{ name }}</h3>
+    </div>
+    <div>
+        {{wtf.quick_form(form)}}
+    </div>
+</div>
+{%endblock%}

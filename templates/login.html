@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登陆</title>
+</head>
+<body>
+<h1>Sign In</h1>
+<form action="" method="post" name="login">
+    {{form.hidden_tag()}}
+    <p>
+        Please enter your ID:<br>
+        {{form.id(size=80)}}<br>
+    </p>
+    <p>{{form.password}} Password</p>
+    <p><input type="submit" value="Sign In"></p>
+</form>
+</body>
+</html>
