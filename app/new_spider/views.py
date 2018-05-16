@@ -1,6 +1,7 @@
 from . import new_spider
 from  flask import jsonify
-from .service import getNews,make_error,make_success
+from .service import getNews
+from .. import *
 @new_spider.route('/',methods=['GET'])
 def xxx():
     data=getNews()
