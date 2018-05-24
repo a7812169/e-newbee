@@ -29,7 +29,7 @@ def add(name,question=None,answer=None,tag_num=None,title=None,content=None,file
 def upload(picture=None):
     base_path = path.abspath(path.dirname(__file__))
     upload_path = path.join(base_path, '')
-    file_name = "/home/image"+picture.filename
+    file_name = "/home/image/"+picture.filename
     picture.save(file_name)
     url_address="https://qunawang.top/image/"+picture.filename
     return url_address
