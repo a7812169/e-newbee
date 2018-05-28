@@ -8,7 +8,7 @@ def login():
     form=LoginForm()
     if form.validate_on_submit():
         if form.username.data=='dp':
-            return redirect('https:qunawang.top/index/update/QA')
+            return redirect('/index/update/QA')
         else:
             return '你输错了'
     return render_template('login.html',form=form)
