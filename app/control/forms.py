@@ -8,7 +8,7 @@ class LoginForm(Form):
 class AddForm(Form):
     question = StringField(label=u'问题', validators=[DataRequired()])
     answer = TextAreaField(label=u'回答', validators=[DataRequired()])
-    type=SelectField('按类型添加',validators=[DataRequired()],choices=[('0','生活'),('1','缴费'),('2','情感'),('3','交通')])
+    type=SelectField('按类型添加',validators=[DataRequired()],choices=[('4','生活'),('5','缴费'),('6','情感'),('7','安全')])
     submit = SubmitField(label=u'提交')
 class AddOtherForm(Form):
     title = StringField(label=u'标题', validators=[DataRequired()])
