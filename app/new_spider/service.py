@@ -34,3 +34,19 @@ def getNews():
         total={"href":href,"author":author,"time":time,"title":title,"content":detial}
         zzz.append(total)
     return zzz
+def getText():
+    conn = get_connection()
+    cur = conn.cursor()
+    sql = 'select * from for_something '
+    cur.execute(sql)
+    res = cur.fetchall()
+    data = []
+    for i in res:
+        list = {
+            "id": i[0],
+            "url": i[1],
+            "content": i[2], }
+        data.append(list)
+    cur.close()
+    conn.close()
+    return data
