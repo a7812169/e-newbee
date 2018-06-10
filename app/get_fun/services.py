@@ -10,8 +10,8 @@ def get(tag):
     for i in res:
         list={
         "title":i[0],
-        "url_address":i[1],
-        "content":i[2],}
+        "url_address":i[2],
+        "content":i[1],}
         data.append(list)
     cur.close()
     conn.close()
