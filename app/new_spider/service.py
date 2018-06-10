@@ -50,3 +50,20 @@ def getText():
     cur.close()
     conn.close()
     return data
+def getxxxx():
+    conn = get_connection()
+    cur = conn.cursor()
+    sql = 'select id,url,content,time from for_something and abc where abc.outer_id=for_something.id '
+    cur.execute(sql)
+    res = cur.fetchall()
+    data = []
+    for i in res:
+        list = {
+            "id": i[0],
+            "url": i[1],
+            "content": i[2],
+            "time":i[3]}
+        data.append(list)
+    cur.close()
+    conn.close()
+    return data

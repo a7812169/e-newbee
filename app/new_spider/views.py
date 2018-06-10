@@ -18,3 +18,10 @@ def abc():
         return jsonify(make_success(data=data))
     else:
         return jsonify(make_error(data=None))
+@new_spider.route('/getNEW',methods=['GET'])
+def xxxx():
+    data=getxxxx()
+    if data:
+        return jsonify(make_success(data=data))
+    else:
+        return jsonify(make_error(data=None))
