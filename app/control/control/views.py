@@ -43,3 +43,6 @@ def update(name):
 @control.route('/user/<name>')
 def user(name):
     return render_template('user.html', name=name)
+@control.route('/login')
+def lo():
+    return login()
