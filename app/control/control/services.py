@@ -39,12 +39,14 @@ def upload(picture=None):
     url_address="https://qunawang.top/image/"+picture.filename
     return url_address
 def login():
-        APPID = 'wx916d94b423d14ec0'
-        SECRET = 'ef792f65566dd5527290f3cf1ed4d4a5'
+        APPID = 'wxe9f8ea2b5c9b1f26'
+        SECRET = 'bd9151ef9d8d4baeed692e67cec9b16b'
         # 获取appid和secret
         data = request.get_data()
+	print(data)
         # 拿到微信小程序发送code信息
         data_json = json.loads(data)
+	print(data_json)
         JSCODE = data_json["code"]
         url = 'https://api.weixin.qq.com/sns/jscode2session?appid=' + APPID + '&secret=' + SECRET + '&js_code=' + JSCODE + '&grant_type=authorization_code'
         # 腾讯的ap
