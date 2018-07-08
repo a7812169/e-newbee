@@ -53,7 +53,7 @@ def getText():
 def getxxxx():
     conn = get_connection()
     cur = conn.cursor()
-    sql = 'select id,url,content,time from for_something and abc where abc.outer_id=for_something.id '
+    sql = 'select for_something.id,for_something.url,for_something.content,for_something.time,abc.tag_id,abc.title from for_something,abc where abc.outer_id=for_something.id '
     cur.execute(sql)
     res = cur.fetchall()
     data = []
@@ -62,7 +62,8 @@ def getxxxx():
             "id": i[0],
             "url": i[1],
             "content": i[2],
-            "time":i[3]}
+            "time":i[3],
+        "tag_id":i[4],"title":i[5]}
         data.append(list)
     cur.close()
     conn.close()

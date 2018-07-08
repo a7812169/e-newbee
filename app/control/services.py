@@ -80,4 +80,18 @@ def login2():
                 con.close()
     else:
         return jsonify({'code': 0, 'msg': '获取失败', 'data': None})
-
+def get(tag):
+    conn=get_connection()
+    cur=conn.cursor()
+    sql='select url,content,title from for_something where tag_id=%s'
+    cur.execute(sql,tag)
+    res=cur.fetchall()
+    data=[]
+    for i in res:
+        list={
+        "url":i[0],
+        "content":i[1],"title":i[2]}
+        data.append(list)
+    cur.close()
+    conn.close()
+    return data

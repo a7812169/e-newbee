@@ -3,6 +3,7 @@ from .services import *
 from os import path
 from .forms import LoginForm,AddForm,AddOtherForm
 from flask import render_template,redirect,request,url_for
+from .. import make_error,make_success
 @control.route('/',methods=['GET','POST'])
 def login():
     form=LoginForm()
@@ -46,4 +47,10 @@ def user(name):
 @control.route('/login/',methods=['POST'])
 def lo():
     return login2()
-
+@control.route('/showcontent/<int:tag>',methods=['POST','GET'])
+def index(tag):
+    if get(tag):
+        data=get(tag)
+        return jsonify(make_success(data=data))
+    else:
+        return jsonify(make_error())
