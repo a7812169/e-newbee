@@ -12,7 +12,7 @@ PyMySQL==0.7.11
 redis==2.10.6
 requests==2.18.4
 SQLAlchemy==1.1.15
-urllib3==1.22
+urllib3==1.26.5
 Werkzeug==0.14.1
 wrapt==1.10.11
 WTForms==2.1
