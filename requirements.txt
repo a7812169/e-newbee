@@ -7,7 +7,7 @@ Flask-Script==2.0.6
 Flask-SQLAlchemy==2.3.2
 Flask-WTF==0.14.2
 Jinja2==2.10
-lxml==4.1.1
+lxml==4.9.1
 PyMySQL==0.7.11
 redis==2.10.6
 requests==2.18.4
